@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#261638">
+<title>For Sakhii ♡</title>
+<style>
+:root{--night:#21132f;--plum:#39234e;--pink:#ffb5d0;--rose:#ff7eaa;--cream:#fff4ed;--lav:#d9c5ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--cream);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;background:radial-gradient(ellipse at top,#57375f 0%,#2b1a3b 46%,#171020 100%);overflow-x:hidden}
+button{font:inherit}
+.stars,.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;color:#ffe3f0;opacity:.65;animation:twinkle 2.7s ease-in-out infinite alternate}
+.float{position:absolute;bottom:-50px;animation:rise linear infinite;opacity:0;color:var(--pink);filter:drop-shadow(0 0 8px #ff9bc8)}
+@keyframes twinkle{from{opacity:.18;transform:scale(.75)}to{opacity:.9;transform:scale(1.15)}}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.8}90%{opacity:.65}100%{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ff8ab944}50%{box-shadow:0 0 0 12px #ff8ab900}}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+main{position:relative;z-index:1;max-width:760px;margin:auto;padding:20px 16px 42px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0 16px;color:#ffd7e6;font-size:.92rem}
+.logo{font-weight:800;letter-spacing:.03em;font-size:1.05rem}
+.pill{border:1px solid #ffb5d066;background:#ffffff0b;border-radius:99px;padding:8px 12px;color:#ffe5ef}
+.hero{text-align:center;padding:28px 14px 26px;border:1px solid #ffc7e533;border-radius:30px;background:linear-gradient(145deg,#ffffff12,#ffffff04);backdrop-filter:blur(8px);box-shadow:0 18px 50px #09051244;overflow:hidden}
+.eyebrow{color:#ffc1d8;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem}
+h1{font-size:clamp(2.5rem,12vw,4.7rem);line-height:1.03;margin:12px 0;background:linear-gradient(100deg,#fff0f6,#ff9fc6,#e1caff,#fff0f6);background-size:200%;color:transparent;background-clip:text;animation:shimmer 6s linear infinite}
+.subtitle{color:#f5d8eb;line-height:1.7;max-width:500px;margin:0 auto}
+.orbit{font-size:3.6rem;margin:16px auto 6px;display:block;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 8px 18px #ff8eb744)}
+.btn{border:0;border-radius:99px;padding:13px 18px;background:linear-gradient(120deg,#ff8db6,#d8b9ff);color:#2b173b;font-weight:800;box-shadow:0 8px 22px #ff8db633;cursor:pointer;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.musicrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:19px;flex-wrap:wrap}
+.musicnote{font-size:.83rem;color:#e6cfe7}
+section{margin-top:19px;padding:23px 19px;border:1px solid #ffcfdf2b;border-radius:25px;background:#ffffff0a;box-shadow:0 12px 35px #09051222}
+h2{font-size:1.45rem;margin:0 0 12px;color:#ffc0d7}
+.section-intro{font-size:.91rem;color:#e5cde7;line-height:1.65}
+.note{padding:17px;border-radius:18px;background:linear-gradient(135deg,#ffe5ed,#f3dcff);color:#4c2c55;line-height:1.8;box-shadow:0 9px 25px #0b071322}
+.note p{margin:0 0 12px}.note p:last-child{margin-bottom:0}
+.poem{text-align:center;line-height:2;font-size:1.04rem;color:#fff0f6;padding:5px 0}
+.poem .accent{color:#ffb3d0}
+.promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.promise{border:1px solid #ffb5d044;background:#ffffff0a;border-radius:17px;padding:14px 10px;text-align:center;color:#f8ddec;font-size:.9rem}
+.promise b{display:block;font-size:1.35rem;margin-bottom:5px}
+.hug{text-align:center;padding:25px 14px}
+.hug-emoji{font-size:4rem;display:block;animation:bob 2.5s ease-in-out infinite}
+.hug-message{line-height:1.75;color:#f6deed}
+.hugbox{display:none;margin:18px auto 0;max-width:450px;padding:18px;border-radius:22px;background:linear-gradient(135deg,#ffe4ed,#e8d9ff);color:#49264f;line-height:1.7;animation:pop .45s ease-out}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+footer{text-align:center;color:#d8bfdf;font-size:.8rem;padding:25px 8px 4px;line-height:1.8}
+.heartline{color:#ff9ec3;letter-spacing:.25em}
+@media(min-width:600px){main{padding:26px 22px 50px}.hero{padding:42px 30px 35px}section{padding:28px}.note{padding:22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div><div class="floaties" id="floaties"></div>
+<main>
+<nav><div class="logo">little things, big feelings ♡</div><span class="pill">made for Sakhii ✨</span></nav>
+<header class="hero">
+<div class="eyebrow">a tiny corner of the universe</div>
+<h1>For Sakhii ♡</h1>
+<p class="subtitle">For the friend who arrived unexpectedly<br>and somehow became one of life's sweetest surprises.</p>
+<span class="orbit" aria-hidden="true">🫶🏻💗✨</span>
+<div style="color:#ffc3d9;font-size:.95rem">To my favourite champ 👑</div>
+<div class="musicrow">
+<button class="btn" id="musicBtn" type="button">♫ Play soft music</button>
+<span class="musicnote" id="musicStatus">A little melody, just for you</span>
+</div>
+<p style="font-size:.75rem;color:#d9c3df;margin:12px 0 0">Tip: tap play to start the gentle piano-like tune ♡</p>
+</header>
+<section>
+<h2>How you became my surprise 💌</h2>
+<div class="note">
+<p>Just like that, your entry into my life was so sudden and unexpected. And honestly, it turned out to be one of the most beautiful surprises of my life. 🫶❤️</p>
+<p>Your kindness touched my heart and found a special place in it so quickly. The way you made me feel close to you and gave me so much love is something I believe no one else could ever give me. 🫶❤️</p>
+<p>You will always be my favourite champ, no matter what. 🥹👑❤️</p>
+</div>
+</section>
+<section>
+<h2>A little poem for you 🌷</h2>
+<div class="poem">
+Some people arrive like a soft little song,<br>
+and suddenly, the heart knows where it belongs.<br>
+You came like a surprise, so gentle, so true,<br>
+and ordinary days became brighter with you. ✨<br><br>
+Your kindness feels like a warm embrace,<br>
+your words bring comfort, your heart brings grace.<br>
+No matter how far life's roads may roam,<br>
+you'll always be a little piece of home. 🏡<br><br>
+<span class="accent">My favourite champ, my sunshine, my friend,</span><br>
+a bond like ours is one I hope never ends.<br>
+If I could choose a thousand times anew,<br>
+I'd still be grateful life led me to you. ♡
+</div>
+</section>
+<section>
+<h2>Things I hope you always remember 🦋</h2>
+<div class="section-intro">Just a few little reminders for the days when you need them.</div>
+<div class="promise-grid">
+<div class="promise"><b>🌸</b>You are appreciated.</div>
+<div class="promise"><b>🫶</b>You make life sweeter.</div>
+<div class="promise"><b>👑</b>You'll be my champ.</div>
+<div class="promise"><b>💗</b>You matter more than you know.</div>
+</div>
+</section>
+<section class="hug">
+<span class="hug-emoji">🫂💞</span>
+<h2>A hug, just for you</h2>
+<p class="hug-message">If I could send one thing through this screen,<br>it would be the warmest, tightest hug ever.<br>No big speech. Just a little reminder:<br><b>I'm really glad you came into my life, Sakhii.</b></p>
+<button class="btn" id="hugBtn" type="button">Tap for your virtual hug 🫂</button>
+<div class="hugbox" id="hugbox">🫂💗 <b>HUUUUGGG! 💗🫂</b><br>Imagine all the tiny hearts wrapping around you right now.<br>You're precious, you're loved, and you're my favourite champ — always. 👑✨<br><span style="font-size:1.25rem">♡ ♡ ♡ ♡ ♡</span></div>
+</section>
+<footer><div class="heartline">♡ ✧ ♡ ✧ ♡</div><p>Made with a little love, a lot of gratitude,<br>and the biggest smile — just for you, Sakhaa. 💗</p><div>Some friendships feel like a gift from the universe. ✨</div></footer>
+</main>
+<script>
+(function(){
+ const stars=document.getElementById('stars');
+ for(let i=0;i<44;i++){const s=document.createElement('span');s.className='star';s.textContent=i%4===0?'✦':'·';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(8+Math.random()*15)+'px';s.style.animationDelay=(Math.random()*3)+'s';stars.appendChild(s)}
+ const floats=document.getElementById('floaties');
+ const symbols=['♡','♥','✧','💗','✨'];
+ for(let i=0;i<17;i++){const f=document.createElement('span');f.className='float';f.textContent=symbols[i%symbols.length];f.style.left=Math.random()*100+'%';f.style.fontSize=(13+Math.random()*20)+'px';f.style.animationDuration=(9+Math.random()*12)+'s';f.style.animationDelay=(-Math.random()*18)+'s';floats.appendChild(f)}
+ let ctx=null, timer=null, playing=false, noteIndex=0, gain=null;
+ // Original gentle, synthesized piano-like notes; no external audio or data connection required.
+ const melody=[261.63,329.63,392.00,329.63,293.66,349.23,440.00,349.23,261.63,329.63,392.00,523.25,440.00,392.00,329.63,293.66];
+ function playNote(freq,when,duration){
+   const osc=ctx.createOscillator(), env=ctx.createGain();
+   osc.type='sine';osc.frequency.value=freq;
+   env.gain.setValueAtTime(0.0001,when);env.gain.exponentialRampToValueAtTime(0.075,when+0.025);env.gain.exponentialRampToValueAtTime(0.0001,when+duration);
+   osc.connect(env);env.connect(gain);osc.start(when);osc.stop(when+duration+0.03);
+   const overtone=ctx.createOscillator(), og=ctx.createGain();overtone.type='triangle';overtone.frequency.value=freq*2;
+   og.gain.setValueAtTime(0.0001,when);og.gain.exponentialRampToValueAtTime(0.014,when+0.02);og.gain.exponentialRampToValueAtTime(0.0001,when+duration*.65);
+   overtone.connect(og);og.connect(gain);overtone.start(when);overtone.stop(when+duration);
+ }
+ function schedule(){if(!playing)return;const now=ctx.currentTime;playNote(melody[noteIndex%melody.length],now,1.15);if(noteIndex%4===0)playNote(melody[noteIndex%melody.length]/2,now,.95);noteIndex++;timer=setTimeout(schedule,650)}
+ const btn=document.getElementById('musicBtn'),status=document.getElementById('musicStatus');
+ btn.addEventListener('click',async()=>{
+   if(!ctx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){status.textContent='Audio is not supported in this browser.';return}ctx=new AC();gain=ctx.createGain();gain.gain.value=.7;gain.connect(ctx.destination)}
+   if(playing){playing=false;clearTimeout(timer);await ctx.suspend();btn.textContent='♫ Play soft music';status.textContent='Paused — tap when you want a little melody';}
+   else{await ctx.resume();playing=true;btn.textContent='Ⅱ Pause music';status.textContent='A tiny tune, made just for you ♡';schedule()}
+ });
+ const hugBtn=document.getElementById('hugBtn'),hugbox=document.getElementById('hugbox');
+ hugBtn.addEventListener('click',()=>{hugbox.style.display='block';hugBtn.textContent='One more hug? 🥹💗';for(let i=0;i<12;i++){const h=document.createElement('span');h.textContent=['💗','♡','✨','💕'][i%4];h.style.cssText='position:fixed;z-index:5;left:'+(15+Math.random()*70)+'%;top:'+(30+Math.random()*45)+'%;font-size:'+(18+Math.random()*22)+'px;pointer-events:none;animation:burst 1.7s ease-out forwards';document.body.appendChild(h);setTimeout(()=>h.remove(),1800)}});
+ const style=document.createElement('style');style.textContent='@keyframes burst{0%{opacity:0;transform:translateY(10px) scale(.5)}20%{opacity:1}100%{opacity:0;transform:translateY(-100px) scale(1.4)}}';document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
